@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.Article">
+  <ContentView.Content>
+        <ScrollView Padding="0, 20, 0, 20">
+            <StackLayout Spacing="30" Orientation="Vertical" Margin="0, 0, 0, 0">
+                <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="goHome"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="profile_back" />
+                    <Label Text="Назад" Style="{StaticResource RegularText}" TextDecorations="Underline" FontSize="12"  />
+                </StackLayout>
+
+                <StackLayout Padding="40, 0, 40, 20" Spacing="20">
+                    <Label Text="Тест оценки мотивации Герчикова" HorizontalTextAlignment="Center" Style="{StaticResource BoldText}" FontSize="14" />
+                    <Image Source="article" />
+                    <Label Text="Равным образом, реализация намеченных плановых заданий говорит о возможностях вывода текущих активов. А также независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом." Style="{StaticResource RegularText}" FontSize="14" />
+                    <Label Text="Равным образом, реализация намеченных плановых заданий говорит о возможностях вывода текущих активов. А также независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом." Style="{StaticResource RegularText}" FontSize="14" />
+                    <Label Text="Равным образом, реализация намеченных плановых заданий говорит о возможностях вывода текущих активов. А также независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом." Style="{StaticResource RegularText}" FontSize="14" />
+                    <Button Clicked="Button_Clicked" Margin="0, 20, 0, 0" Text="Открыть доступ" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentView.Content>
+</ContentView>

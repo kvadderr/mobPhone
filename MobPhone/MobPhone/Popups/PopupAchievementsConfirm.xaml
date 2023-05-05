@@ -3,15 +3,15 @@
            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
            Size="335, 220"
-           BackgroundColor="Transparent"
+           Color="Transparent"
            x:Class="MobPhone.Popups.PopupAchievementsConfirm">
     <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
-        <StackLayout>
-            <Label Text="Подтверждаете отправку достижения?" Style="{StaticResource BoldText}" HorizontalTextAlignment="Center" FontSize="16" WidthRequest="200"/>
+        <StackLayout Spacing="20" Margin="30" VerticalOptions="Center">
+            <Label Text="Подтверждаете отправку достижения?" Style="{StaticResource BoldText}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" WidthRequest="200"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Нет" CornerRadius="12" />
-                <Button Text="Да" CornerRadius="12" Background="{StaticResource greenGradient}" />
+                <Button Text="Нет" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" BackgroundColor="Transparent" BorderColor="#524E7D"/>
+                <Button Text="Да" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" Background="{StaticResource greenGradient}" />
             </StackLayout>
         </StackLayout>
     </Frame>

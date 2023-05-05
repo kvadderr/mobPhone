@@ -3,32 +3,196 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobPhone.Views.News">
   <ContentView.Content>
-        <StackLayout Spacing="30" Orientation="Vertical" Margin="0, 0, 0, 0">
+        <ScrollView Padding="0, 20, 0, 20">
+            <StackLayout Spacing="30" Orientation="Vertical" Margin="0, 0, 0, 0">
+                <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="goHome"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="back" />
+                    <Label Text="Новости" Style="{StaticResource BoldText}" FontSize="16"  />
+                </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </StackLayout.GestureRecognizers>
-                <Image Source="back" />
-                <Label Text="Новости" Style="{StaticResource BoldText}" FontSize="16"  />
-            </StackLayout>
+                <StackLayout Spacing="32">
 
-            <StackLayout>
+                    <StackLayout Padding="20, 0, 20, 0" Spacing="12">
+                        <Label Text="21 июня 2023 года" Style="{StaticResource RegularText}" FontSize="14" HorizontalTextAlignment="Center"/>
 
-                <StackLayout>
-                    <Label Text="21 июня 2023 года" Style="{StaticResource RegularText}" FontSize="14" HorizontalTextAlignment="Center"/>
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Padding="20, 0, 20, 0" Spacing="12">
+                        <Label Text="20 июня 2023 года" Style="{StaticResource RegularText}" FontSize="14" HorizontalTextAlignment="Center"/>
+
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame CornerRadius="12" BackgroundColor="#ebe9ff" Padding="12" HasShadow="False">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Мария Иванова" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                    <Label Text="20:09" HorizontalOptions="EndAndExpand" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Тест оценки мотивации сотрудников" Style="{StaticResource RegularText}" HorizontalOptions="Start" WidthRequest="150" FontSize="12"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_coin" />
+                                            <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                            <Image Source="small_karma" />
+                                            <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
 
                 </StackLayout>
 
 
-                <StackLayout>
-                    <Label Text="20 июня 2023 года" Style="{StaticResource RegularText}" FontSize="14" HorizontalTextAlignment="Center"/>
-
-                </StackLayout>
-
             </StackLayout>
-            
-        </StackLayout>
+        </ScrollView>
 
     </ContentView.Content>
 </ContentView>

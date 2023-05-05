@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Size="335, 500"
-             Color="Transparent"
+             BackgroundColor="Transparent"
              x:Class="MobPhone.Popups.PopupSendAchievements">
     <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
         <ScrollView>

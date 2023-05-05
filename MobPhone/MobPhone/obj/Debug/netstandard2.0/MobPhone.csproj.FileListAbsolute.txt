@@ -25,3 +25,7 @@ C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\
 C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Popups\PopupSendAchievements.xaml.g.cs
 C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Views\Share.xaml.g.cs
 C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Views\News.xaml.g.cs
+C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Popups\PopupNews.xaml.g.cs
+C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Views\Article.xaml.g.cs
+C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Popups\PopupArticleConfirm.xaml.g.cs
+C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone\obj\Debug\netstandard2.0\Popups\PopupSendArticle.xaml.g.cs

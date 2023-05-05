@@ -51,7 +51,9 @@ namespace MobPhone.Views
 
         private void ImageButton_Clicked_2(object sender, EventArgs e)
         {
-            Navigation.ShowPopup(new PopupFilter());
+            var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+            Article article = new Article();
+            frame.Content = article;
         }
 
         private void goHome(object sender, EventArgs e)

@@ -33,7 +33,9 @@ namespace MobPhone.Views
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {
-
+            var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+            News news = new News();
+            frame.Content = news;
         }
 
         private void Button_Clicked_3(object sender, EventArgs e)

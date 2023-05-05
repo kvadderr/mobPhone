@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="335, 380"
+             Color="Transparent"
+             x:Class="MobPhone.Popups.PopupSendArticle">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <ScrollView>
+        <StackLayout Spacing="20" Margin="30">
+                <Image Source="Avatar" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center"/>
+                <Label Text="Тестирование" Style="{StaticResource RegularText}" HorizontalOptions="Center" FontSize="12" />
+                <Label Text="Тест оценки мотивации Герчикова”" Style="{StaticResource BoldText}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" />
+                <Label Text="Открыт для Марии Ивановой" Style="{StaticResource RegularText}" HorizontalOptions="Center" FontSize="12" />
+                <Button  Margin="0, 20, 0, 0" Text="Отлично" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White"/>
+
+        </StackLayout>
+        </ScrollView>
+    </Frame>
+</xct:Popup>

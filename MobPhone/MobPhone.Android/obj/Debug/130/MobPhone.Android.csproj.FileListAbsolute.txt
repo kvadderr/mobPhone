@@ -687,3 +687,4 @@ C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone.Android\obj\Debug\130\sta
 C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone.Android\obj\Debug\130\res\drawable\send_message.xml
 C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone.Android\obj\Debug\130\res\drawable\send.png
 C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone.Android\obj\Debug\130\res\drawable\readable.xml
+C:\Users\Msoul\source\repos\MobPhone\MobPhone\MobPhone.Android\obj\Debug\130\res\drawable\article.png

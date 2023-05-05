@@ -31,6 +31,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Popups\PopupArticleConfirm.xaml.cs">
+      <DependentUpon>PopupArticleConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupNews.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PopupNews.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupSendArticle.xaml.cs">
+      <DependentUpon>PopupSendArticle.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Popups\PopupSendAchievements.xaml.cs">
       <DependentUpon>PopupSendAchievements.xaml</DependentUpon>
     </Compile>
@@ -46,7 +56,14 @@
     <EmbeddedResource Update="Popups\PopupOpenAchievements.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Popups\PopupNews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Achievements.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Article.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Dialogs.xaml">
