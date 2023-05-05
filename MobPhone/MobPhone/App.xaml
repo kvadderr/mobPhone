@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="BoldText" TargetType="Label">
+                <Setter Property="TextColor" Value="#1E1584" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontFamily" Value="noto_sans_bold" />
+            </Style>
+
+            <Style x:Key="RegularText" TargetType="Label">
+                <Setter Property="TextColor" Value="#1E1584" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="noto_sans_regular" />
+            </Style>
+
+            <Style x:Key="LightText" TargetType="Label">
+                <Setter Property="TextColor" Value="#1E1584" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="noto_sans_light" />
+            </Style>
+
+            <Style x:Key="MediumText" TargetType="Label">
+                <Setter Property="TextColor" Value="#1E1584" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="noto_sans_medium" />
+            </Style>
+
+            <LinearGradientBrush x:Key="mainGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#FCFCFF" Offset="0"/>
+                <GradientStop Color="#F1F0FF" Offset="1"/>
+            </LinearGradientBrush>
+            
+            <LinearGradientBrush x:Key="blockGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#F9F9FF" Offset="0"/>
+                <GradientStop Color="#F6F5FF" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="blueGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+                <GradientStop Color="#7B6FFF" Offset="0"/>
+                <GradientStop Color="#5242FF" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="modalGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+                <GradientStop Color="#F9F9FF" Offset="0"/>
+                <GradientStop Color="#E4E1FF" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="greenGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+                <GradientStop Color="#26E27C" Offset="0"/>
+                <GradientStop Color="#15D36C" Offset="1"/>
+            </LinearGradientBrush>
+
+            <LinearGradientBrush x:Key="redGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+                <GradientStop Color="#FF89BB" Offset="0"/>
+                <GradientStop Color="#FF1D45" Offset="1"/>
+            </LinearGradientBrush>
+
+            <Style x:Key="menuButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#E9E7FE" />
+                <Style.Triggers>
+                    <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                        <Setter Property="Background" Value="{StaticResource blueGradient}" />
+                        <Setter Property="BackgroundColor" Value="#5242FF" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <DataTemplate x:Key="profileMessageList">
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout BackgroundColor="Transparent" Orientation="Horizontal" Margin="20" Padding="0">
+                            <Image Source="Avatar.png" Grid.RowSpan="2" WidthRequest="48" HeightRequest="48"/>
+                            <StackLayout VerticalOptions="Center" Margin="5, 0, 0, 0">
+                                <Label Text="{Binding FIO}" Style="{StaticResource BoldText}" FontSize="12" />
+                                <Label  Text="{Binding Message}" FontSize="10" FontFamily="noto_sans_regular" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="Center">
+                                <Image IsVisible="{Binding isIdea}" Source="idea" WidthRequest="16" HeightRequest="18"/>
+                                <Frame IsVisible="{Binding isUnread}" CornerRadius="100" Background="{StaticResource redGradient}" HorizontalOptions="Center" WidthRequest="18" HeightRequest="18" Padding="0">
+                                    <Label Text="1" TextColor="White" FontSize="9" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Style="{StaticResource MediumText}"/>
+                                </Frame>
+                                <Label Text="Вчера" Style="{StaticResource LightText}" FontSize="10"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="raitingTable">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Frame BackgroundColor="#E1DFFE" CornerRadius="12" Margin="20, 0, 20, 12" HasShadow="False">
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <AbsoluteLayout Padding="0" Margin="0" VerticalOptions="Center">
+                                    <Image Source="Avatar" Grid.Column="0" WidthRequest="48" HeightRequest="48" VerticalOptions="CenterAndExpand"/>
+                                    <Image Source="{Binding notifi}" AbsoluteLayout.LayoutBounds="0.55,-0.2, 18, 18" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                                </AbsoluteLayout>
+                                <Label Text="{Binding FIO}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Position}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Address}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Path=level,StringFormat='{0} уровень'}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="4" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Coin}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Karma}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="6" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding Karma_Total}" Style="{StaticResource RegularText}" FontSize="12" Grid.Column="7" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            </Grid>
+                        </Frame>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>

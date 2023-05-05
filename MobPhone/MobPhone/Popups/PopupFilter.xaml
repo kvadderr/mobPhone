@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           Size="335, 450"
+           Color="Transparent"
+           x:Class="MobPhone.Popups.PopupFilter">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout Margin="30">
+
+                <ImageButton Source="close" HorizontalOptions="End" BackgroundColor="Transparent"/>
+
+                <Label Text="Сортировать:" Style="{StaticResource BoldText}" FontSize="16" />
+
+                <StackLayout Margin="0, 32, 0, 0">
+                    <StackLayout Orientation="Horizontal" >
+                        <CheckBox x:Name="check_first" Color="#7265FB" CheckedChanged="CheckBox_CheckedChanged" VerticalOptions="Center"/>
+                        <Label Text="Должность" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                    </StackLayout>
+
+                    <StackLayout x:Name="option_first" IsVisible="False" Margin="40 , 0, 0, 0">
+                        <StackLayout Orientation="Horizontal" >
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label Text="Официант" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label Text="Бариста" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label Text="Менеджер" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" >
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label Text="Директор" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                        <Label Text="Кофейня" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                        <Label Text="Уровень" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                        <Label Text="Монеты" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" >
+                        <CheckBox Color="#7265FB" VerticalOptions="Center" x:Name="check_second" CheckedChanged="check_second_CheckedChanged"/>
+                        <Label Text="Карма месяц" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                    </StackLayout>
+                    <xct:RangeSlider ValueLabelSpacing="10" x:Name="option_second" IsVisible="False" TrackHighlightBorderColor="#5242FF" MinimumValue="1000" MaximumValue="10000" StepValue="1" UpperValue="10" ThumbColor="#5242FF" ThumbBorderColor="White" TrackColor="#d1ccfe" TrackHighlightColor="#5242FF"/>
+
+
+                    <StackLayout Orientation="Horizontal" >
+                        <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                        <Label Text="Карма общая" Style="{StaticResource RegularText}" VerticalOptions="Center" FontSize="12"/>
+                    </StackLayout>
+
+
+
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Frame>
+</xct:Popup>

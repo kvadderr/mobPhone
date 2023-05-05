@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.Home">
+  <ContentView.Content>
+      <StackLayout>
+            <Button Clicked="Button_Clicked" Text="Рейтинг" />
+            <Button Clicked="Button_Clicked_1" Text="Профили" />
+            <Button Text="Назначения" />
+            <Button Clicked="Button_Clicked_2" Text="Новости" />
+            <Button Clicked="Button_Clicked_3" Text="Сообщения" />
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

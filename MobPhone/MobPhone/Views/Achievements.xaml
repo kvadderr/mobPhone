@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.Achievements">
+  <ContentView.Content>
+        <ScrollView>
+            <StackLayout Spacing="32">
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="back"/>
+                    <Label Text="Достижения" FontSize="16" Style="{StaticResource BoldText}" />
+                </StackLayout>
+
+                <StackLayout Padding="0" Spacing="20">
+                    <Label Text="Карьерная лестница" Style="{StaticResource BoldText}" FontSize="16" Margin="20, 0, 0, 0"/>
+                    <ScrollView Orientation="Horizontal" Padding="20, 0, 20, 0" HorizontalScrollBarVisibility="Never" Margin="0">
+                        <StackLayout Spacing="32">
+                            <StackLayout Orientation="Horizontal" Spacing="32">
+                                <StackLayout>
+                                    <StackLayout.GestureRecognizers>
+                                    </StackLayout.GestureRecognizers>
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Новобранец" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <BoxView HeightRequest="1" Color="#524E7D" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </ScrollView>
+                   
+                    <Label Text="Проверка знаний" Style="{StaticResource BoldText}" FontSize="16" Margin="20, 0, 0, 0"/>
+                    <ScrollView Orientation="Horizontal" Padding="20, 0, 20, 0" HorizontalScrollBarVisibility="Never" Margin="0">
+                        <StackLayout Spacing="32">
+                            <StackLayout Orientation="Horizontal" Spacing="32">
+                                <StackLayout>
+                                    <StackLayout.GestureRecognizers>
+                                    </StackLayout.GestureRecognizers>
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Новобранец" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <BoxView HeightRequest="1" Color="#524E7D" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </ScrollView>
+
+                    <Label Text="Свое достижение" Style="{StaticResource BoldText}" FontSize="16" Margin="20, 0, 0, 0"/>
+                    <ScrollView Orientation="Horizontal" Padding="20, 0, 20, 0" HorizontalScrollBarVisibility="Never" Margin="0">
+                        <StackLayout Spacing="32">
+                            <StackLayout Orientation="Horizontal" Spacing="32">
+                                <StackLayout>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                                    </StackLayout.GestureRecognizers>
+                                    <Image Source="best" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <BoxView HeightRequest="1" Color="#524E7D" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </ScrollView>
+                    
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

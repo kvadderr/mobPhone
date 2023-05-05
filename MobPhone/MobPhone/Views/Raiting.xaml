@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.Raiting">
+  <ContentView.Content>
+      
+        <StackLayout Spacing="30" Orientation="Vertical" Margin="0, 0, 0, 0">
+
+            <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="goHome"/>
+                </StackLayout.GestureRecognizers>
+                <Image Source="back" />
+                <Label Text="Рейтинг" Style="{StaticResource BoldText}" FontSize="16"  />
+            </StackLayout>
+            
+            
+            <Frame CornerRadius="12" Padding="16, 12, 16, 12" Margin="20, 0, 20, 0" BackgroundColor="#E1DFFE" HorizontalOptions="FillAndExpand" HasShadow="False">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="openFilterModal"/>
+                </Frame.GestureRecognizers>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center"  Spacing="20">
+                    <Image Source="filter" WidthRequest="16" HeightRequest="16"/>
+                    <Label Text="Фильтр" Style="{StaticResource RegularText}" FontSize="12" />
+                </StackLayout>
+            </Frame>
+
+            <ScrollView Orientation="Horizontal">
+                <StackLayout>
+
+                    <Grid Margin="20, 0, 20, 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Column="0" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Label Text="Фото" Style="{StaticResource LightText}" HorizontalTextAlignment="Center" VerticalTextAlignment="End"/>
+                        </StackLayout>
+                        <StackLayout  Grid.Column="1" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Image Source="down" />
+                            <Label Text="Фамилия Имя" Style="{StaticResource LightText}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="2" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Image Source="down" />
+                            <Label Text="Должность" Style="{StaticResource LightText}" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Padding="0" Margin="0" Grid.Column="3" Spacing="10" Orientation="Vertical" VerticalOptions="EndAndExpand">
+                            <Image Source="up" />
+                            <Label Text="Кофейня" Style="{StaticResource LightText}" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="4" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Image Source="down" />
+                            <Label Text="Уровень" Style="{StaticResource LightText}" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="5" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Image Source="down" />
+                            <Label Text="Монеты" Style="{StaticResource LightText}" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="6" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Image Source="down" />
+                            <Label Text="Карма месяц" Style="{StaticResource LightText}" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="7" Spacing="10" VerticalOptions="EndAndExpand">
+                            <Image Source="down" />
+                            <Label Text="Карма общая" Style="{StaticResource LightText}" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+
+                    </Grid>
+                    <ListView x:Name="MyListView"
+                           HasUnevenRows="True"
+                           BackgroundColor="Transparent"
+                           SeparatorVisibility="None"
+                           SelectionMode="None"
+                           ItemsSource="{Binding MyData}"
+                           ItemTemplate="{StaticResource raitingTable}" />
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

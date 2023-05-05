@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.Profile">
+  <ContentView.Content>
+        <ScrollView BackgroundColor="Transparent">
+            <StackLayout Spacing="20">
+                <Grid Margin="20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0" Spacing="8">
+                        <ImageButton Style="{StaticResource menuButtonStyle}" Clicked="ImageButton_Clicked" Source="attachmentIcon.png" Padding="30" CornerRadius="12"/>
+                        <Label Text="Отправить достижение" Style="{StaticResource LightText}" FontSize="10" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="100"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Spacing="8">
+                        <ImageButton Style="{StaticResource menuButtonStyle}" Clicked="ImageButton_Clicked_1" Source="plusIcon.png" Padding="30" CornerRadius="12"/>
+                        <Label Text="Поставить задачу" Style="{StaticResource LightText}" FontSize="10" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="100"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Spacing="8">
+                        <ImageButton Style="{StaticResource menuButtonStyle}" Clicked="ImageButton_Clicked_2" Source="shareIcon.png" Padding="30" CornerRadius="12"/>
+                        <Label Text="Открыть доступ" Style="{StaticResource LightText}" FontSize="10" HorizontalTextAlignment="Center" HorizontalOptions="Center" WidthRequest="100"/>
+                    </StackLayout>
+                </Grid>
+
+                <Frame CornerRadius="12" Padding="0" Background="{StaticResource blockGradient}" HorizontalOptions="FillAndExpand" HasShadow="False">
+                    <StackLayout Margin="20" Spacing="20" Padding="0, 20, 0, 20" >
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="goHome" />
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="profile_back" />
+                            <Label Text="Назад" TextDecorations="Underline"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                            <Image Source="Avatar.png" Grid.RowSpan="2" WidthRequest="64" HeightRequest="64"/>
+                            <StackLayout VerticalOptions="Center" Margin="10, 0, 0, 0">
+                                <Label Text="Мария Иванова, 21 год" Style="{StaticResource BoldText}" FontSize="14" />
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" VerticalTextAlignment="Center"/>
+                                    <Frame CornerRadius="12" Padding="8, 6, 8, 6" BackgroundColor="#7265FB" HasShadow="False">
+                                        <Label Text="1 уровень" TextColor="#fff" FontSize="12" FontFamily="noto_sans_regular" />
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Frame CornerRadius="12" HasShadow="False" Margin="0, 15, 0, 0" BackgroundColor="#ECEBFF" HorizontalOptions="FillAndExpand" HeightRequest="40">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackLayout Spacing="0" Grid.Column="0" HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="small_coin" />
+                                        <Label Text="1346" Style="{StaticResource BoldText}" />
+                                    </StackLayout>
+                                    <Label HorizontalTextAlignment="Center" Text="Всего монет" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                </StackLayout>
+                                
+                                <BoxView WidthRequest="1" VerticalOptions="FillAndExpand" BackgroundColor="#524E7D" Grid.Column="1"/>
+
+                                <StackLayout Spacing="0" Grid.Column="2" HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="small_karma" />
+                                        <Label Text="4567" Style="{StaticResource BoldText}" />
+                                    </StackLayout>
+                                    <Label HorizontalTextAlignment="Center" Text="За месяц" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                </StackLayout>
+
+                                <BoxView WidthRequest="1" VerticalOptions="FillAndExpand" BackgroundColor="#524E7D" Grid.Column="3"/>
+
+                                <StackLayout Spacing="0" Grid.Column="4" HorizontalOptions="Center">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="small_karma" />
+                                        <Label Text="17 927" Style="{StaticResource BoldText}" />
+                                    </StackLayout>
+                                    <Label HorizontalTextAlignment="Center" Text="Общая" Style="{StaticResource RegularText}" FontSize="12" TextColor="#524E7DCC"/>
+                                </StackLayout>
+
+                            </Grid>
+                        </Frame>
+
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Место работы:" Style="{StaticResource BoldText}" FontSize="12" />
+                                <Label Text="г. Нальчик, ул. Ленина, 45" Style="{StaticResource RegularText}" FontSize="12" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Увлечения:" Style="{StaticResource BoldText}" FontSize="12" />
+                                <Label Text="Кошки и футбол" Style="{StaticResource RegularText}" FontSize="12" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Мечта:" Style="{StaticResource BoldText}" FontSize="12" />
+                                <Label Text="Увидеть Рим" Style="{StaticResource RegularText}" FontSize="12" />
+                            </StackLayout>
+                            <StackLayout x:Name="hidden_layout" IsVisible="false">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Язык:" Style="{StaticResource BoldText}" FontSize="12" />
+                                    <Label Text="Английский, французский" Style="{StaticResource RegularText}" FontSize="12" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Хочу через 5 лет:" Style="{StaticResource BoldText}" FontSize="12" />
+                                    <Label Text="Жить в Париже" Style="{StaticResource RegularText}" FontSize="12" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Лучшее во мне: " Style="{StaticResource BoldText}" FontSize="12" />
+                                    <Label Text="Улыбка" Style="{StaticResource RegularText}" FontSize="12" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <Label x:Name="viewAll" Text="Показать больше" TextDecorations="Underline" HorizontalTextAlignment="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="viewHiddenLayout" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="12" Background="{StaticResource blockGradient}" Padding="0" HorizontalOptions="FillAndExpand" HasShadow="False">
+                    <StackLayout Spacing="20" Padding="20" >
+                        <Label Text="Статистика"  HorizontalTextAlignment="Center" Style="{StaticResource BoldText}"/>
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Frame CornerRadius="12" Grid.Row="0" Grid.Column="0"  BackgroundColor="#ECEBFF" Padding="0, 20, 0, 20" HasShadow="False">
+                                <StackLayout>
+                                    <Label Text="61" HorizontalTextAlignment="Center" Style="{StaticResource BoldText}" FontSize="20"/>
+                                    <Label Text="день отработан" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame CornerRadius="12" Grid.Row="0" Grid.Column="1"  BackgroundColor="#ECEBFF" Padding="0, 20, 0, 20" HasShadow="False">
+                                <StackLayout>
+                                    <Label Text="365" HorizontalTextAlignment="Center" Style="{StaticResource BoldText}" FontSize="20"/>
+                                    <Label Text="Чеков выбито" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame CornerRadius="12" Grid.Row="1" Grid.Column="0"  BackgroundColor="#ECEBFF" Padding="0, 20, 0, 20" HasShadow="False">
+                                <StackLayout>
+                                    <Label Text="91" HorizontalTextAlignment="Center" Style="{StaticResource BoldText}" FontSize="20"/>
+                                    <Label Text="Кофе сварен" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame CornerRadius="12" Grid.Row="1" Grid.Column="1"  BackgroundColor="#ECEBFF" Padding="0, 20, 0, 20" HasShadow="False">
+                                <StackLayout>
+                                    <Label Text="210 909" HorizontalTextAlignment="Center" Style="{StaticResource BoldText}" FontSize="20"/>
+                                    <Label Text="Общая сумма чеков" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="12" Background="{StaticResource blockGradient}" Padding="0" Margin="0" HasShadow="False">
+                    <StackLayout Spacing="20" Padding="0, 20, 0, 20"  >
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Padding="0">
+                            <StackLayout Orientation="Horizontal" Spacing="32" Padding="20">
+                                <StackLayout>
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="1 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="2 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="3 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="4 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="5 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="6 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="7 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="8 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                                <StackLayout Opacity="0.4">
+                                    <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
+                                    <Label Text="9 уровень" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource MediumText}" FontSize="12"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+
+
+                <Frame CornerRadius="12" Background="{StaticResource blockGradient}" Padding="0" Margin="0" HasShadow="False">
+                    <StackLayout Spacing="20" Padding="0, 20, 0, 0" >
+                        <Label Text="Достижения"  HorizontalTextAlignment="Center" Style="{StaticResource BoldText}"/>
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0, 0, 0, 28"  Padding="0">
+                            <StackLayout Orientation="Horizontal" Spacing="32" Padding="20">
+                                <AbsoluteLayout Padding="0" Margin="0">
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Frame Padding="0" HasShadow="False" AbsoluteLayout.LayoutBounds="1.2,-0.1,40, 25" AbsoluteLayout.LayoutFlags="PositionProportional" Background="{StaticResource greenGradient}" CornerRadius="12" >
+                                        <Label Text="New" Style="{StaticResource RegularText}" FontSize="10" HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Frame>
+                                </AbsoluteLayout>
+                                <AbsoluteLayout Padding="0" Margin="0">
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Frame Padding="0" HasShadow="False" AbsoluteLayout.LayoutBounds="1.2,-0.1,40, 25" AbsoluteLayout.LayoutFlags="PositionProportional" Background="{StaticResource greenGradient}" CornerRadius="12" >
+                                        <Label Text="New" Style="{StaticResource RegularText}" FontSize="10" HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Frame>
+                                </AbsoluteLayout>
+                                <AbsoluteLayout Padding="0" Margin="0">
+                                    <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                    <Frame Padding="0" HasShadow="False" AbsoluteLayout.LayoutBounds="1.2,-0.1,40, 25" AbsoluteLayout.LayoutFlags="PositionProportional" Background="{StaticResource greenGradient}" CornerRadius="12" >
+                                        <Label Text="New" Style="{StaticResource RegularText}" FontSize="10" HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Frame>
+                                </AbsoluteLayout>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                                <Image Source="active_ach" WidthRequest="80" HeightRequest="80"/>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.Dialogs">
+  <ContentView.Content>
+        <StackLayout Spacing="30" Orientation="Vertical" Margin="0, 0, 0, 0">
+
+            <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="goHome"/>
+                </StackLayout.GestureRecognizers>
+                <Image Source="back" />
+                <Label Text="Сообщения" Style="{StaticResource BoldText}" FontSize="16"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="20, 0, 20, 0">
+                <Frame Padding="0" HorizontalOptions="FillAndExpand" BackgroundColor="#dcd9fe" CornerRadius="12" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="16" HorizontalOptions="Center" Padding="16, 12, 16, 12">
+                        <StackLayout.GestureRecognizers>
+
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="send_message" />
+                        <Label Text="Написать сообщение" Style="{StaticResource RegularText}" FontSize="12" />
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="ideaBtn" Padding="0" BackgroundColor="#dcd9fe" CornerRadius="12" HasShadow="False">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Frame.GestureRecognizers>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Padding="16, 12, 16, 12">
+                        <Image Source="idea" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <ListView x:Name="MyListView"
+                           HasUnevenRows="True"
+                           BackgroundColor="Transparent"
+                           SeparatorVisibility="Default"
+                           VerticalScrollBarVisibility="Never"
+                           SelectionMode="None"
+                           ItemsSource="{Binding MyData}"
+                           ItemTemplate="{StaticResource profileMessageList}" />
+
+        </StackLayout>
+
+    </ContentView.Content>
+</ContentView>

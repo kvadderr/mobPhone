@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.MainPage">
+
+    <StackLayout Background="{StaticResource mainGradient}">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20" Background="{StaticResource blockGradient}">
+            <ImageButton Source="menu.xml" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+            <ImageButton Source="user.xml" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+            <StackLayout HorizontalOptions="EndAndExpand"  Orientation="Horizontal" >
+                <Image Source="avatar_2.png" />
+                <Image Source="down_arrow.xml" />
+            </StackLayout>
+
+
+        </StackLayout>
+
+        <Button 
+            FontFamily="noto_sans_bold" Text="Koffein, г. Нальчик, ул. Ленина 145" 
+            Background="{StaticResource blueGradient}" Padding="0, 16, 0, 16" 
+            BackgroundColor="#5242FF"
+            TextColor="#fff" Margin="20, 0, 20, 20" CornerRadius="12"/>
+
+        <Frame Padding="0" x:Name="myFrame" BackgroundColor="Transparent"/>
+        
+    </StackLayout>
+
+</ContentPage>

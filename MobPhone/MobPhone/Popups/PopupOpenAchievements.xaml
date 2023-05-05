@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="335, 500"
+             Color="Transparent"
+             x:Class="MobPhone.Popups.PopupSendAchievements">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <ScrollView>
+        <StackLayout Spacing="20" Margin="30">
+
+            <ImageButton Source="close" HorizontalOptions="End" BackgroundColor="Transparent"/>
+            <Image Source="best" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center"/>
+            <Label Text="Диагностика пройдена" Style="{StaticResource BoldText}" HorizontalOptions="Center" FontSize="16" />
+
+            <StackLayout Spacing="25" Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Spacing="10" Orientation="Horizontal">
+                    <Image Source="small_coin.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center"/>
+                    <Label Text="+ 100" Style="{StaticResource BoldText}" FontSize="14" VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Spacing="10" Orientation="Horizontal">
+                    <Image Source="small_karma.png" WidthRequest="20" HeightRequest="20" VerticalOptions="Center"/>
+                    <Label Text="+ 500" Style="{StaticResource BoldText}" FontSize="14" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" >
+                <Frame Background="{StaticResource blueGradient}" Padding="16, 12, 16, 12" CornerRadius="12">
+                    <Label Text="Частыssй" Style="{StaticResource RegularText}" FontSize="12" TextColor="White" />
+                </Frame>
+                <Label Text="Есть у 100% коллег" Style="{StaticResource RegularText}" FontSize="12" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="#524E7D" />
+
+            <Label Text="Твоя первая диагностика пройдена! Теперь ты знаешь как отличить кофейные зерна от растворимого порошка." HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+
+                <Button Text="Отправить" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White"/>
+
+        </StackLayout>
+        </ScrollView>
+    </Frame>
+</xct:Popup>

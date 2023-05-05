@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.News">
+  <ContentView.Content>
+        <StackLayout Spacing="30" Orientation="Vertical" Margin="0, 0, 0, 0">
+
+            <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </StackLayout.GestureRecognizers>
+                <Image Source="back" />
+                <Label Text="Новости" Style="{StaticResource BoldText}" FontSize="16"  />
+            </StackLayout>
+
+            <StackLayout>
+
+                <StackLayout>
+                    <Label Text="21 июня 2023 года" Style="{StaticResource RegularText}" FontSize="14" HorizontalTextAlignment="Center"/>
+
+                </StackLayout>
+
+
+                <StackLayout>
+                    <Label Text="20 июня 2023 года" Style="{StaticResource RegularText}" FontSize="14" HorizontalTextAlignment="Center"/>
+
+                </StackLayout>
+
+            </StackLayout>
+            
+        </StackLayout>
+
+    </ContentView.Content>
+</ContentView>
