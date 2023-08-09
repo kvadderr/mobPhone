@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           xmlns:custom="clr-namespace:MobPhone.Custom"
+           xmlns:xc="clr-namespace:XCalendar;assembly=XCalendar"
+           xmlns:xcModels="clr-namespace:XCalendar.Models;assembly=XCalendar"
+           xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar"
+           Size="335, 550"
+           Color="Transparent"
+           x:Class="MobPhone.Popups.PopupsCreateTask.PopupsDeadline">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <StackLayout Spacing="20" Margin="26" VerticalOptions="Center">
+            <ImageButton Source="close" HorizontalOptions="EndAndExpand" Padding="0" BackgroundColor="Transparent"/>
+            
+            <xc:CalendarView
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                AutoRows="True"
+                NavigationBackgroundColor="Transparent"
+                NavigationArrowBackgroundColor="Transparent"
+                NavigationArrowColor="#1E1584"
+                NavigationTextColor="#1E1584"
+                DayNameTextColor="Transparent"
+                SelectionType="Single"
+                >
+                <xc:CalendarView.DayTemplate>
+                    <DataTemplate x:DataType="{x:Type xcModels:CalendarDay}">
+                        <!--  ContentView so that the margin is respected by the MonthView  -->
+                        <ContentView>
+                            <xc:CalendarDayView
+                                Margin="2.5"
+                                HeightRequest="43"
+                                CalendarView="{Binding ., Source={x:Reference MainCalendarView}}"
+                                DateTime="{Binding DateTime}"
+                                SelectedBackgroundColor="#695bff"
+                                TodayBorderColor="#695bff">
+    
+
+                            </xc:CalendarDayView>
+                        </ContentView>
+                    </DataTemplate>
+                </xc:CalendarView.DayTemplate>
+            </xc:CalendarView>
+            <Button Background="{StaticResource blueGradient}" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" Text="Далее 1/3" TextColor="White"/>
+        </StackLayout>
+    </Frame>
+</xct:Popup>

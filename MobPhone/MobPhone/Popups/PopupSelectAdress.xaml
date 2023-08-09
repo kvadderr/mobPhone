@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           Size="335, 500"
+           Color="Transparent"
+           x:Class="MobPhone.Popups.PopupSelectAdress">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+            <StackLayout Spacing="32">
+
+                <Frame
+                    Background="{StaticResource blueGradient}"
+                    Padding="0, 16, 0, 16"
+                    HasShadow="False">
+                    <StackLayout Spacing="16" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label
+                        VerticalOptions="Center"
+                        Text="Koffein, г. Нальчик, ул. Ленина 145" 
+                        TextColor="White"
+                        TextDecorations="None"
+                        Style="{StaticResource RegularText}"
+                        FontSize="14"/>
+                        <Image
+                        VerticalOptions="Center"
+                        Source="arrow_down" />
+                    </StackLayout>
+
+                </Frame>
+                <StackLayout Margin="20, 0, 20, 0"  Orientation="Horizontal">
+                    <CheckBox x:Name="allCheckBox" IsChecked="False" Color="#7265FB" VerticalOptions="Center"/>
+                    <Label Text="Выбрать все" VerticalOptions="Center" Style="{StaticResource RegularText}" />
+                </StackLayout>
+
+                <ListView x:Name="MyListView"
+                           HasUnevenRows="True"
+                           Margin="20,0,20,0"
+                           BackgroundColor="Transparent"
+                           SeparatorVisibility="Default"
+                           SelectionMode="None"
+                           VerticalScrollBarVisibility="Never"
+                           ItemsSource="{Binding MyData}"
+                           ItemTemplate="{StaticResource addressList}" />
+
+                <Button Margin="20, 5, 20, 20" Text="Применить" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White" />
+
+            </StackLayout>
+    </Frame>
+</xct:Popup>

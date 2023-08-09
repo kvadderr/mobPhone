@@ -9,19 +9,78 @@
     ".NETStandard,Version=v2.0/": {
       "MobPhone/1.0.0": {
         "dependencies": {
+          "BottomSheetXF": "1.1.0",
           "NETStandard.Library": "2.0.3",
+          "Plugin.XCalendar": "2.1.0",
+          "Syncfusion.Xamarin.SfPicker": "21.2.5",
           "Xamarin.CommunityToolkit": "2.0.6",
           "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2291"
+          "Xamarin.Forms": "5.0.0.2291",
+          "Xamarin.Plugin.Calendar": "2.0.9699"
         },
         "runtime": {
           "MobPhone.dll": {}
+        }
+      },
+      "BottomSheetXF/1.1.0": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "runtime": {
+          "lib/netstandard2.0/BottomSheetXF.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Plugin.XCalendar/2.1.0": {
+        "dependencies": {
+          "Xamarin.CommunityToolkit": "2.0.6",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "runtime": {
+          "lib/netstandard2.0/XCalendar.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/21.2.5": {
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "21.2.5.0",
+            "fileVersion": "21.2.5.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/21.2.5": {
+        "dependencies": {
+          "Syncfusion.Licensing": "21.2.5",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "21.2.5.0",
+            "fileVersion": "21.2.5.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfPicker/21.2.5": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "21.2.5",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfPicker.XForms.dll": {
+            "assemblyVersion": "21.2.5.0",
+            "fileVersion": "21.2.5.0"
+          }
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -109,6 +168,17 @@
             "fileVersion": "5.0.0.850"
           }
         }
+      },
+      "Xamarin.Plugin.Calendar/2.0.9699": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Plugin.Calendar.dll": {
+            "assemblyVersion": "2.0.9699.0",
+            "fileVersion": "2.0.9699.0"
+          }
+        }
       }
     }
   },
@@ -117,6 +187,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BottomSheetXF/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dCSjFgWXQFLddVydaqbwQlScU2eXxdZO3lHz43PL+RqOi8rmRrnmV+2tttTPhM3l0B3w+FKwuFOkdovHPy6P0A==",
+      "path": "bottomsheetxf/1.1.0",
+      "hashPath": "bottomsheetxf.1.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -131,6 +208,34 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Plugin.XCalendar/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+2o6g4N692RHRRb6+OIep5KbAiYJ7XU7acHHXqFwJrie4E4ID53sCAJQP36/KP0tarvCpUjsWqJ8SN8tlLejZg==",
+      "path": "plugin.xcalendar/2.1.0",
+      "hashPath": "plugin.xcalendar.2.1.0.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/21.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bKWJpGtmnp9lfMKoyNEi7IL64nOkUODsX8q/EkO4IusR5VU3Y9KD5FPXHUVnOyq7fa+e41FT50lT9AKsHdyR2Q==",
+      "path": "syncfusion.licensing/21.2.5",
+      "hashPath": "syncfusion.licensing.21.2.5.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/21.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YUsJ4KADBxo4sVEqTmTF2UDNpmqEGoyi53tUWEcrMw85TMu5Lubyt6qTUcMuxMHH8TMy8OXyaHp6ggr4P99h9Q==",
+      "path": "syncfusion.xamarin.core/21.2.5",
+      "hashPath": "syncfusion.xamarin.core.21.2.5.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfPicker/21.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yrgue8ENQ9RKmy0stY2Ljp77jXKXcQ/nT0mclC10DXwvlF8PfYkAPQhzZ+e0bG+yc/GiJSBs7n35U1RVN48fUQ==",
+      "path": "syncfusion.xamarin.sfpicker/21.2.5",
+      "hashPath": "syncfusion.xamarin.sfpicker.21.2.5.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
@@ -187,6 +292,13 @@
       "sha512": "sha512-No5HI+c05RBDT5Oe7ZSRaO+cQVeZNhrYdchvczNeZdWQiwrux8RJcVg8chI4DZ2xODeBjF0juIF9u1A5ysZ+uQ==",
       "path": "xamarin.forms/5.0.0.2291",
       "hashPath": "xamarin.forms.5.0.0.2291.nupkg.sha512"
+    },
+    "Xamarin.Plugin.Calendar/2.0.9699": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yt1MHlv1uu9LiihnsyyCc/YagU2bJcQLi6XPtLneW8WiT8uLemgGDu0O75hFvdEtyk8uUOg/1pR9jNbnP+dzQw==",
+      "path": "xamarin.plugin.calendar/2.0.9699",
+      "hashPath": "xamarin.plugin.calendar.2.0.9699.nupkg.sha512"
     }
   }
 }

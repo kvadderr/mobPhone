@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bottomSheet:BaseBottomSheet xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            ParentHeight="600"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:bottomSheet="clr-namespace:BottomSheet.Core;assembly=BottomSheetXF"
+             x:Class="MobPhone.Bottom.SelectProfile">
+    <bottomSheet:BaseBottomSheet.View>
+        <ContentView>
+            <Frame CornerRadius="20" Padding="16, 26, 16, 0" BackgroundColor="#fff" HeightRequest="600">
+                <StackLayout Spacing="32">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Image Source="send_message" />
+                            <Label Text="Написать сообщение" Style="{StaticResource BoldText}" FontSize="14"/>
+                        </StackLayout>
+                        <ImageButton Source="close" HorizontalOptions="End" Padding="0" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                    <ScrollView VerticalScrollBarVisibility="Never">
+                        <StackLayout Spacing="6">
+                            <Frame CornerRadius="12" BackgroundColor="#edecff" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" BackgroundColor="#edecff" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" BackgroundColor="#edecff" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="12" HasShadow="False" Padding="9, 12, 20, 12">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="Avatar" HeightRequest="34" WidthRequest="34"/>
+                                    <Label Text="Андрей Суздальцев" VerticalOptions="Center" Style="{StaticResource RegularText}" FontSize="12"/>
+                                    <Label Text="Управляющий" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Style="{StaticResource LightText}" FontSize="10"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+        </ContentView>
+    </bottomSheet:BaseBottomSheet.View>
+
+</bottomSheet:BaseBottomSheet>

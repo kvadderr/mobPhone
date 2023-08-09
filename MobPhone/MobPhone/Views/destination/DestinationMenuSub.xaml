@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:MobPhone.Custom"
+             x:Class="MobPhone.Views.destination.DestinationMenuSub">
+  <ContentView.Content>
+      <StackLayout Margin="20, 0, 20, 0" Spacing="20">
+            <StackLayout Orientation="Horizontal" Margin="0, 0, 0, 0" Spacing="22">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </StackLayout.GestureRecognizers>
+                <Image Source="back" />
+                <Label x:Name="menuTitle" Text="Библиотека" VerticalOptions="Center" Style="{StaticResource BoldText}" FontSize="16" />
+            </StackLayout>
+            <Label IsVisible="False" x:Name="subMenuTitle" Text="Поддомен" VerticalOptions="Center" Style="{StaticResource BoldText}" FontSize="14" />
+            <ListView x:Name="MyListView"
+                HasUnevenRows="True"
+                BackgroundColor="Transparent"
+                SeparatorVisibility="None"
+                VerticalScrollBarVisibility="Never"
+                SelectionMode="None"
+                ItemsSource="{Binding MyData}"
+                ItemTemplate="{StaticResource shareSubMenu}" />
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

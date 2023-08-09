@@ -30,9 +30,9 @@ namespace MobPhone.Views
 
         private void ImageButton_Clicked_1(object sender, EventArgs e)
         {
-            Raiting raiting = new Raiting();
+            CreateTask createTask = new CreateTask();
             var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
-            frame.Content = raiting;
+            frame.Content = createTask;
         }
 
         private void viewHiddenLayout(object sender, EventArgs e)
@@ -52,8 +52,8 @@ namespace MobPhone.Views
         private void ImageButton_Clicked_2(object sender, EventArgs e)
         {
             var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
-            Article article = new Article();
-            frame.Content = article;
+            Share share = new Share(false);
+            frame.Content = share;
         }
 
         private void goHome(object sender, EventArgs e)

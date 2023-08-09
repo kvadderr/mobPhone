@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           xmlns:custom="clr-namespace:MobPhone.Custom"
+           xmlns:xc="clr-namespace:XCalendar;assembly=XCalendar"
+           xmlns:xcModels="clr-namespace:XCalendar.Models;assembly=XCalendar"
+           xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar"
+           Size="335, 380"
+           Color="Transparent"
+           x:Class="MobPhone.Popups.PopupsCreateTask.PopupsInterval">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <StackLayout Spacing="20" Margin="26" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal" Margin="0, 0, 0, 0" Spacing="22">
+                <Image Source="profile_back" />
+                <Label Text="Назад" Style="{StaticResource RegularText}" TextDecorations="Underline" FontSize="12"  />
+            </StackLayout>
+
+            <Label Text="Как часто?" FontSize="14" Style="{StaticResource BoldText}" HorizontalOptions="Center" />
+            <FlexLayout Direction="Row" Wrap="Wrap"  AlignContent="SpaceBetween">
+                <Frame x:Name="SingleItem" CornerRadius="12" HasShadow="False" Padding="16, 10, 16, 10" Margin="0, 0, 20, 20" BackgroundColor="#e4e1ff">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Frame.GestureRecognizers>
+                    <Label x:Name="SingleLabel" Text="Один раз" Style="{StaticResource RegularText}"  FontSize="14" />
+                </Frame>
+                <Frame x:Name="EveryDay" CornerRadius="12" HasShadow="False" Padding="16, 10, 16, 10"  Margin="0, 0, 20, 20" BackgroundColor="#e4e1ff">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                    </Frame.GestureRecognizers>
+                    <Label x:Name="EveryDayLabel" Text="Ежедневно" Style="{StaticResource RegularText}" FontSize="14" />
+                </Frame>
+                <Frame x:Name="EveryMonth" CornerRadius="12" HasShadow="False" Padding="16, 10, 16, 10" Margin="0, 0, 20, 20" BackgroundColor="#e4e1ff">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                    </Frame.GestureRecognizers>
+                    <Label x:Name="EveryMonthLabel" Text="Ежемесячно" Style="{StaticResource RegularText}" FontSize="14" />
+                </Frame>
+            </FlexLayout>
+            <Button Background="{StaticResource blueGradient}" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" Text="Сохранить" TextColor="White"/>
+        </StackLayout>
+    </Frame>
+</xct:Popup>

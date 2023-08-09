@@ -10,7 +10,7 @@
             <Label Text="Подтверждаете отправку достижения?" Style="{StaticResource BoldText}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" WidthRequest="200"/>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Button Text="Нет" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" BackgroundColor="Transparent" BorderColor="#524E7D"/>
+                <Button Text="Нет" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" BackgroundColor="Transparent" BorderWidth="1" BorderColor="#524E7D"/>
                 <Button Text="Да" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" Background="{StaticResource greenGradient}" />
             </StackLayout>
         </StackLayout>

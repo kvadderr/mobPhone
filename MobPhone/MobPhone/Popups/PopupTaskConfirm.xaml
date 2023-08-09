@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           Size="335, 220"
+           Color="Transparent"
+           x:Class="MobPhone.Popups.PopupTaskConfirm">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <StackLayout Spacing="20" Margin="30" VerticalOptions="Center">
+            <Label Text="Подтверждаете отправку задачи?" Style="{StaticResource BoldText}" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" WidthRequest="200"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Нет" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" BackgroundColor="Transparent" BorderWidth="1" BorderColor="#524E7D"/>
+                <Button Text="Да" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" Background="{StaticResource greenGradient}" />
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</xct:Popup>

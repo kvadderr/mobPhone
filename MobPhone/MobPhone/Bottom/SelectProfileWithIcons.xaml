@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bottomSheet:BaseBottomSheet xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             ParentHeight="600"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:custom="clr-namespace:MobPhone.Custom"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:bottomSheet="clr-namespace:BottomSheet.Core;assembly=BottomSheetXF"
+             x:Class="MobPhone.Bottom.SelectProfileWithIcons">
+    <bottomSheet:BaseBottomSheet.View>
+        <ContentView>
+            <Frame CornerRadius="20" Padding="16, 26, 16, 0" BackgroundColor="#fff" HeightRequest="600">
+                <StackLayout Spacing="32">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Image Source="userAdd"/>
+                            <Label Text="Выбрать сотрудника" Style="{StaticResource BoldText}" FontSize="14"/>
+                        </StackLayout>
+                        <ImageButton Source="close" HorizontalOptions="End" Padding="0" BackgroundColor="Transparent"/>
+                    </StackLayout>
+                    <custom:CustomEntry xct:CornerRadiusEffect.CornerRadius="12" x:Name="taskText" Placeholder="Поиск" HorizontalTextAlignment="Center" HeightRequest="34" BackgroundColor="#e3e0ff" FontFamily="noto_sans_light" TextColor="#1E1584" FontSize="10"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="allCheckBox" IsChecked="False" CheckedChanged="CheckBox_CheckedChanged"  Color="#7265FB" VerticalOptions="Center"/>
+                        <Label Text="Добавить всех сотрудников" VerticalOptions="Center" Style="{StaticResource RegularText}" />
+                    </StackLayout>
+                    <ListView x:Name="MyListView"
+                           HasUnevenRows="True"
+                           BackgroundColor="Transparent"
+                           SeparatorVisibility="Default"
+                           SelectionMode="None"
+                           VerticalScrollBarVisibility="Never"
+                           ItemsSource="{Binding MyData}"
+                           ItemTemplate="{StaticResource profileListWithCheckbox}" />
+                    <Button Clicked="Button_Clicked_1" Margin="0, 5, 0, 20" Text="Сохранить" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White" />
+                </StackLayout>
+            </Frame>
+        </ContentView>
+    </bottomSheet:BaseBottomSheet.View>
+
+</bottomSheet:BaseBottomSheet>

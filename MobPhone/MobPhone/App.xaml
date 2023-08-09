@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm ="clr-namespace:MobPhone.Model"
              x:Class="MobPhone.App">
     <Application.Resources>
 
@@ -70,6 +71,12 @@
                 </Style.Triggers>
             </Style>
 
+            <Frame x:Key="menuBTN">
+                <StackLayout>
+                    <Label Text="{Binding text}" />
+                </StackLayout>
+            </Frame>
+            
             <DataTemplate x:Key="profileMessageList">
                 <ViewCell>
                     <ViewCell.View>
@@ -87,6 +94,95 @@
                                 <Label Text="Вчера" Style="{StaticResource LightText}" FontSize="10"/>
                             </StackLayout>
                         </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="editTextWithIcons">
+                <ViewCell>
+                    <ViewCell.View>
+                    <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Margin="20, 0, 20, 12" HasShadow="False">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FIO}" />
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="shareSubMenu">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="20, 16, 20, 16" Margin="0, 0, 0, 12" HasShadow="False">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Name}" Style="{StaticResource RegularText}" FontSize="14"/>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+           
+
+            <DataTemplate x:Key="raiseList">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="16" HasShadow="False">
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                                <Label Text="{Binding LabelText}" />
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="profileList">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Margin="20, 0, 20, 12" Padding="10" HasShadow="False">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Image Source="Avatar" Grid.RowSpan="2" WidthRequest="50" HeightRequest="50"/>
+                                <StackLayout VerticalOptions="Center" Margin="10, 0, 0, 0">
+                                    <Label Text="{Binding FIO}" Style="{StaticResource RegularText}" FontSize="14" />
+                                    <Label Text="{Binding Position}" Style="{StaticResource LightText}" FontSize="10" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+
+            <DataTemplate x:Key="addressList">
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Padding="0, 20, 0, 24" Orientation="Horizontal" Spacing="12">
+                            <CheckBox InputTransparent= "True" IsChecked="{Binding isVisibleChecked}" Color="#7265FB" VerticalOptions="Center"/>
+                            <Label Text="{Binding Name}" Style="{StaticResource RegularText}" FontSize="12" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="profileListWithCheckbox">
+                <ViewCell>
+                    <ViewCell.View>
+                        <Frame CornerRadius="12" Margin="0, 0, 0, 12" Padding="10" HasShadow="False">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Image Source="Avatar" Grid.RowSpan="2" WidthRequest="32" HeightRequest="32"/>
+                                <Label Text="{Binding FIO}" Style="{StaticResource RegularText}" FontSize="12" VerticalOptions="Center" />
+                                <Grid HorizontalOptions="EndAndExpand">
+                                    <CheckBox IsEnabled="False" InputTransparent= "True" IsChecked="True" IsVisible="{Binding isVisibleChecked}" Color="#7265FB" VerticalOptions="Center"/>
+                                    <Label Margin="0,0,10,0" HorizontalOptions="EndAndExpand" Text="{Binding Position}" IsVisible="{Binding isVisiblePosition}" Style="{StaticResource LightText}" FontSize="10" VerticalTextAlignment="Center"/>
+                                    <BoxView
+                                        Color="Transparent">
+                                        <BoxView.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ItemSelectedCommand}"/>
+                                        </BoxView.GestureRecognizers>
+                                    </BoxView>
+                                </Grid>
+                               
+                            </StackLayout>
+                        </Frame>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>

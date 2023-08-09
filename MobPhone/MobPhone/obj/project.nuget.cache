@@ -1,19 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "bM68uycY5jyjUN8XMRnaEwXEmeb2rXdTBkLmbUNNZhfoI+PmEl4jT9mf/ZGi7TRFAyqytm/E1ekK77TDxWKAqQ==",
+  "dgSpecHash": "6+LemvJLAUWa0KQ2WJ+t8+02vbkUfPfg148s3Bnbvy2Sy8+QBUlFhYFblSyi8SAxKZcEtF5JPfsrWnC2r1vJoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Msoul\\source\\repos\\MobPhone\\MobPhone\\MobPhone\\MobPhone.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\mobPhone\\MobPhone\\MobPhone\\MobPhone.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Msoul\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.6\\xamarin.communitytoolkit.2.0.6.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\Msoul\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\bottomsheetxf\\1.1.0\\bottomsheetxf.1.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\plugin.xcalendar\\2.1.0\\plugin.xcalendar.2.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.licensing\\21.2.5\\syncfusion.licensing.21.2.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.core\\21.2.5\\syncfusion.xamarin.core.21.2.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.sfpicker\\21.2.5\\syncfusion.xamarin.sfpicker.21.2.5.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.3\\system.runtime.compilerservices.unsafe.4.5.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.6\\xamarin.communitytoolkit.2.0.6.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.forms\\5.0.0.2291\\xamarin.forms.5.0.0.2291.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.plugin.calendar\\2.0.9699\\xamarin.plugin.calendar.2.0.9699.nupkg.sha512"
   ],
   "logs": []
 }

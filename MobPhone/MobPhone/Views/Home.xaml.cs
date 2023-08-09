@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MobPhone.Views.destination;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,37 +13,53 @@ namespace MobPhone.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Home : ContentView
 	{
-		public Home ()
-		{
-			InitializeComponent ();
-		}
-
-        private void Button_Clicked(object sender, EventArgs e)
+        public Home()
         {
-            var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
-            Raiting raiting = new Raiting();
-            frame.Content = raiting;
-        }
+            InitializeComponent();
+            App.isDestination = false;
 
-        private void Button_Clicked_1(object sender, EventArgs e)
-        {
-            var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
-            Profile profile = new Profile();
-            frame.Content = profile;
-        }
+            raitingBtn.PressedAction = () =>
+            {
+                var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+                Raiting raiting = new Raiting();
+                frame.Content = raiting;
+            };
 
-        private void Button_Clicked_2(object sender, EventArgs e)
-        {
-            var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
-            News news = new News();
-            frame.Content = news;
-        }
+            profileBtn.PressedAction = () =>
+            {
+                var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+                ProfileSelect profile = new ProfileSelect();
+                frame.Content = profile;
+            };
 
-        private void Button_Clicked_3(object sender, EventArgs e)
-        {
-            var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
-            Dialogs dialogs = new Dialogs();
-            frame.Content = dialogs;
+            notificationBtn.PressedAction = () =>
+            {
+                var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+                News news = new News();
+                frame.Content = news;
+            };
+
+            smsBtn.PressedAction = () =>
+            {
+                var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+                Dialogs dialogs = new Dialogs();
+                frame.Content = dialogs;
+            };
+
+            destinationBtn.PressedAction = () =>
+            {
+                var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+                DestinationMenu destinationMenu = new DestinationMenu();
+                frame.Content = destinationMenu;
+            };
+
+            smsAdminBtn.PressedAction = () =>
+            {
+                var frame = App.Current.MainPage.FindByName<Frame>("myFrame");
+                DialogsAdmin dialogs = new DialogsAdmin();
+                frame.Content = dialogs;
+            };
+
         }
     }
 }

@@ -3,8 +3,15 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "MobPhone.Android.dll" comes first in this list. */
 		"MobPhone.Android.dll",
+		"BottomSheetXF.dll",
 		"FormsViewGroup.dll",
 		"MobPhone.dll",
+		"Syncfusion.Core.XForms.Android.dll",
+		"Syncfusion.Core.XForms.dll",
+		"Syncfusion.Licensing.dll",
+		"Syncfusion.SfPicker.Android.dll",
+		"Syncfusion.SfPicker.XForms.Android.dll",
+		"Syncfusion.SfPicker.XForms.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.Annotation.Experimental.dll",
@@ -65,6 +72,8 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"Xamarin.Plugin.Calendar.dll",
+		"XCalendar.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

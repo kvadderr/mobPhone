@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+           xmlns:custom="clr-namespace:MobPhone.Custom"
+           Size="335, 360"
+           Color="Transparent"
+           x:Class="MobPhone.Popups.PopupsCreateTask.PopupsNewDetail">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <StackLayout Spacing="20" Margin="26" VerticalOptions="Center">
+            <ImageButton Source="close" HorizontalOptions="EndAndExpand" Padding="0" BackgroundColor="Transparent"/>
+            <Label Text="Добавьте описание" Style="{StaticResource BoldText}" HorizontalOptions="Center" FontSize="14"/>
+            <Label Text="Осталось 100 символов" Style="{StaticResource LightText}" HorizontalOptions="EndAndExpand" FontSize="10"/>
+            <custom:CustomEditor x:Name="taskText" Placeholder="Введите текст..." PlaceholderColor="#524E7D" HeightRequest="120"  FontFamily="noto_sans_regular" TextColor="#1E1584" FontSize="14"/>
+            <Button Clicked="Button_Clicked" Background="{StaticResource blueGradient}" CornerRadius="12" TextTransform="None" FontFamily="noto_sans_regular" Text="Сохранить" TextColor="White"/>
+        </StackLayout>
+    </Frame>
+</xct:Popup>

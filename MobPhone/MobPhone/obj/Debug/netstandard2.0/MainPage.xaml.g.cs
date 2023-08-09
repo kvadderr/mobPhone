@@ -20,9 +20,17 @@ namespace MobPhone {
         private global::Xamarin.Forms.Frame myFrame;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Bottom.SelectProfileWithIcons SelectProfileSheet;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Bottom.SelectProfile CustomBottomSheet;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
             myFrame = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Frame>(this, "myFrame");
+            SelectProfileSheet = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Bottom.SelectProfileWithIcons>(this, "SelectProfileSheet");
+            CustomBottomSheet = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Bottom.SelectProfile>(this, "CustomBottomSheet");
         }
     }
 }

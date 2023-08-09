@@ -27,7 +27,7 @@
 
                 <Frame CornerRadius="12" Padding="0" Background="{StaticResource blockGradient}" HorizontalOptions="FillAndExpand" HasShadow="False">
                     <StackLayout Margin="20" Spacing="20" Padding="0, 20, 0, 20" >
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="15">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="goHome" />
                             </StackLayout.GestureRecognizers>

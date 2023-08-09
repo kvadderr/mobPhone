@@ -6,6 +6,10 @@ namespace MobPhone
 {
     public partial class App : Application
     {
+
+        public static MainViewModel ViewModel { get; set; }
+        public static bool isDestination { get; set; }
+
         public App()
         {
             InitializeComponent();

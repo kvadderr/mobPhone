@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="335, 450"
+             Color="Transparent"
+             x:Class="MobPhone.Popups.PopupRiseSuccess">
+    <Frame CornerRadius="12" Margin="0" Padding="0" Background="{StaticResource modalGradient}">
+        <ScrollView>
+        <StackLayout Spacing="20" Margin="30">
+                <Label Text="21 июня 2023 г. 20:09" Style="{StaticResource RegularText}" HorizontalOptions="Center" TextColor="#524E7DCC" FontSize="12" />
+                <Image Source="Avatar" WidthRequest="80" HeightRequest="80" HorizontalOptions="Center"/>
+                <Label Text="Мария Иванова повышена до 2-го уровня " HorizontalTextAlignment="Center" Style="{StaticResource BoldText}" HorizontalOptions="Center" FontSize="16" />
+                <Label Text="Повышение до бариста" Style="{StaticResource MediumText}" HorizontalOptions="Center" FontSize="12" />
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Image Source="small_coin" />
+                        <Label Text="+ 1346" Style="{StaticResource BoldText}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <Image Source="small_karma" />
+                        <Label Text="+ 4567" Style="{StaticResource BoldText}" />
+                    </StackLayout>
+                </StackLayout>
+                <Button  Margin="0, 20, 0, 0" Text="Закрыть" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
+    </Frame>
+</xct:Popup>

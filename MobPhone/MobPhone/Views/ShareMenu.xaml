@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:custom="clr-namespace:MobPhone.Custom"
+             x:Class="MobPhone.Views.ShareMenu">
+  <ContentView.Content>
+      <StackLayout Margin="20, 0, 20, 0">
+            <custom:CustomMenuButton
+                x:Name="testBtn"
+                ImageSourceNormal="task"
+                ImageSourceActive="taskActive"
+                FrameSize="44"
+                LabelText="Тестирование"/>
+            <custom:CustomMenuButton
+                x:Name="libraryBtn"
+                ImageSourceNormal="book"
+                ImageSourceActive="bookActive"
+                FrameSize="44"
+                LabelText="Библиотека"/>
+            <custom:CustomMenuButton
+                x:Name="raiseBtn"
+                ImageSourceNormal="rise"
+                ImageSourceActive="riseActive"
+                FrameSize="44"
+                LabelText="Повышение"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

@@ -14,7 +14,8 @@ namespace MobPhone.Popups
 		public PopupFilter ()
 		{
 			InitializeComponent ();
-		}
+            Size = new Size(335, timeGrid.Height + timeGrid.Height);
+        }
 
         private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {

@@ -20,6 +20,7 @@
                             <StackLayout Orientation="Horizontal" Spacing="32">
                                 <StackLayout>
                                     <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
                                     </StackLayout.GestureRecognizers>
                                     <Image Source="active_level" WidthRequest="80" HeightRequest="80"/>
                                     <Label Text="Онбординг пройден" WidthRequest="100" HorizontalTextAlignment="Center" Style="{StaticResource RegularText}" FontSize="12"/>

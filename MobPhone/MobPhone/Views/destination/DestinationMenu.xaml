@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:MobPhone.Custom"
+             x:Class="MobPhone.Views.destination.DestinationMenu">
+  <ContentView.Content>
+      <StackLayout Spacing="32">
+            <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </StackLayout.GestureRecognizers>
+                <Image Source="back"/>
+                <Label Text="Назначения" FontSize="16" Style="{StaticResource BoldText}" />
+            </StackLayout>
+            <StackLayout Spacing="12" Padding="20, 0, 20, 0">
+                <custom:CustomMenuButton
+                    x:Name="taskBtn"
+                    ImageSourceNormal="chart"
+                    ImageSourceActive="chartActive"
+                    FrameSize="44"
+                    LabelText="Задача"/>
+                <custom:CustomMenuButton
+                    x:Name="profileBtn"
+                    ImageSourceNormal="profile"
+                    ImageSourceActive="profileActive"
+                    FrameSize="44"
+                    LabelText="Достижение"/>
+                <custom:CustomMenuButton
+                    x:Name="testBtn"
+                    ImageSourceNormal="vector"
+                    ImageSourceActive="vectorActive"
+                    FrameSize="44"
+                    LabelText="Тестирование"/>
+                <custom:CustomMenuButton
+                    x:Name="notificationBtn"
+                    ImageSourceNormal="notification"
+                    ImageSourceActive="notificationActive"
+                    FrameSize="44"
+                    LabelText="Библиотека"/>
+                <custom:CustomMenuButton
+                    x:Name="smsBtn"
+                    ImageSourceNormal="sms"
+                    ImageSourceActive="smsActive"
+                    FrameSize="44"
+                    LabelText="Повышение">
+                    <custom:CustomMenuButton.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClickCommand}" CommandParameter="2" />
+                    </custom:CustomMenuButton.GestureRecognizers>
+                </custom:CustomMenuButton>
+            </StackLayout>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

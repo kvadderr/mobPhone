@@ -25,9 +25,8 @@
                 </StackLayout>
             </Frame>
 
-            <ScrollView Orientation="Horizontal">
-                <StackLayout>
-
+            <ScrollView Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="FillAndExpand">
                     <Grid Margin="20, 0, 20, 0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="80" />
@@ -81,7 +80,7 @@
                            BackgroundColor="Transparent"
                            SeparatorVisibility="None"
                            SelectionMode="None"
-                           ItemsSource="{Binding MyData}"
+                           ItemsSource="{Binding MyData}"   
                            ItemTemplate="{StaticResource raitingTable}" />
 
                 </StackLayout>

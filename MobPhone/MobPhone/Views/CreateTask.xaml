@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:MobPhone.Custom"
+             x:Class="MobPhone.Views.CreateTask">
+  <ContentView.Content>
+        <ScrollView>
+            <StackLayout Spacing="32" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="back"/>
+                    <Label Text="Поставить задачу" FontSize="16" Style="{StaticResource BoldText}" />
+                </StackLayout>
+                
+                
+                <StackLayout Padding="20, 0, 20, 0" Spacing="12">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Image Source="star"/>
+                        <Label Text="- Поля обязательные для заполнения" Style="{StaticResource LightText}" FontSize="10"/>
+                    </StackLayout>
+                    <custom:CustomEditText IsVisible="False" ImageSource="userAdd" Padding="0" x:Name="taskProfile" isRequired="True" LabelText="Сотрудники" LabelTextSize="14" HasShadow="False" BackgroundColor="Transparent">
+                        <custom:CustomEditText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_6" />
+                        </custom:CustomEditText.GestureRecognizers>
+                    </custom:CustomEditText>
+                    <custom:CustomEditText ImageSource="add_circle" Padding="0" x:Name="taskName" isRequired="True" LabelText="Задача" LabelTextSize="14" HasShadow="False" BackgroundColor="Transparent">
+                        <custom:CustomEditText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                        </custom:CustomEditText.GestureRecognizers>
+                    </custom:CustomEditText>
+
+                    <custom:CustomEditText ImageSource="deadline" Padding="0" x:Name="deadline" isRequired="True" LabelText="Дедлайн" LabelTextSize="14" HasShadow="False" BackgroundColor="Transparent">
+                        <custom:CustomEditText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                        </custom:CustomEditText.GestureRecognizers>
+                    </custom:CustomEditText>
+
+                    <custom:CustomEditText ImageSource="edit" Padding="0" x:Name="detail" isRequired="False" LabelText="Описание" LabelTextSize="14" HasShadow="False" BackgroundColor="Transparent">
+                        <custom:CustomEditText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3" />
+                        </custom:CustomEditText.GestureRecognizers>
+                    </custom:CustomEditText>
+
+                    <custom:CustomEditText ImageSource="coins" Padding="0" x:Name="coin" isRequired="False" LabelText="Монеты" LabelTextSize="14" HasShadow="False" BackgroundColor="Transparent">
+                        <custom:CustomEditText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" />
+                        </custom:CustomEditText.GestureRecognizers>
+                    </custom:CustomEditText>
+
+                    <custom:CustomEditText ImageSource="karmas" Padding="0" x:Name="karma" isRequired="False" LabelText="Карма" LabelTextSize="14" HasShadow="False" BackgroundColor="Transparent">
+                        <custom:CustomEditText.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5" />
+                        </custom:CustomEditText.GestureRecognizers>
+                    </custom:CustomEditText>
+
+                </StackLayout>
+
+                <Button 
+                    Clicked="Button_Clicked"
+                    Margin="20, 0, 20, 0" 
+                    Background="{StaticResource blueGradient}" 
+                    CornerRadius="12" TextTransform="None" 
+                    FontFamily="noto_sans_regular" 
+                    Text="Отправить задачу" TextColor="White"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.ShareRaise">
+  <ContentView.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="32">
+                <Label Text="Повышение" Style="{StaticResource BoldText}" FontSize="14" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Image Source="Avatar.png" Grid.RowSpan="2" WidthRequest="64" HeightRequest="64"/>
+                    <StackLayout VerticalOptions="Center" Margin="10, 0, 0, 0">
+                        <Label Text="Мария Иванова" Style="{StaticResource BoldText}" FontSize="14" />
+                        <StackLayout Orientation="Horizontal" Spacing="12">
+                            <Label Text="Официант" Style="{StaticResource RegularText}" FontSize="12" VerticalTextAlignment="Center"/>
+                            <Frame CornerRadius="12" Padding="8, 6, 8, 6" BackgroundColor="#7265FB" HasShadow="False">
+                                <Label Text="1 уровень" TextColor="#fff" FontSize="12" FontFamily="noto_sans_regular" />
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="16" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label VerticalOptions="Center" WidthRequest="200">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Успешно сдать тестирование" Style="{StaticResource RegularText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="16" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label VerticalOptions="Center" WidthRequest="200">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Сварить кофе за " Style="{StaticResource RegularText}" />
+                                        <Span Text="120 секунд" Style="{StaticResource BoldText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="16" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label VerticalOptions="Center" WidthRequest="200">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Сварить " Style="{StaticResource RegularText}" />
+                                        <Span Text="300 чашек кофе" Style="{StaticResource BoldText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="16" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label VerticalOptions="Center" WidthRequest="200">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Выбить " Style="{StaticResource RegularText}" />
+                                        <Span Text="300 чеков" Style="{StaticResource BoldText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Text="104" TextColor="Red" Style="{StaticResource BoldText}" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="#E6E4FF" CornerRadius="12" Padding="16" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox Color="#7265FB" VerticalOptions="Center"/>
+                            <Label VerticalOptions="Center" WidthRequest="200">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Сумма чеков должна превышать " Style="{StaticResource RegularText}" />
+                                        <Span Text="700 тыс. руб." Style="{StaticResource BoldText}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label Text="289 887" Style="{StaticResource BoldText}" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                <Button Clicked="Button_Clicked" Text="Повысить до 2-го уровня" Background="{StaticResource blueGradient}" TextTransform="None" BackgroundColor="#5242FF" CornerRadius="12" FontFamily="noto_sans_regular" TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

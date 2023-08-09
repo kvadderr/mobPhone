@@ -7,17 +7,13 @@
 
             <StackLayout Orientation="Horizontal" Margin="28, 0, 0, 0" Spacing="22">
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer />
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                 </StackLayout.GestureRecognizers>
                 <Image Source="back" />
                 <Label Text="Открыть доступ" Style="{StaticResource BoldText}" FontSize="16"  />
             </StackLayout>
 
-            <StackLayout>
-                <Button Text="Тестирование" />
-                <Button Text="Библиотека" />
-                <Button Text="Повышение" />
-            </StackLayout>
+            <Frame Padding="0" Margin="0" BackgroundColor="Transparent" HasShadow="False" x:Name="shareFrame" />
 
         </StackLayout>
 

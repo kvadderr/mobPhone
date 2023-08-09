@@ -32,6 +32,8 @@ namespace MobPhone.Views
             };
 
             MyListView.ItemsSource = profileRaitings;
+            MyListView.Effects.Add(Effect.Resolve("MyEffects.ListViewHighlightEffect"));
+
         }
 
         private void openFilterModal(object sender, EventArgs e)

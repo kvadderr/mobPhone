@@ -25,12 +25,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BottomSheetXF" Version="1.1.0" />
+    <PackageReference Include="Plugin.XCalendar" Version="2.1.0" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="21.2.5" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Plugin.Calendar" Version="2.0.9699" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Bottom\SelectProfileWithIcons.xaml.cs">
+      <DependentUpon>SelectProfileWithIcons.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupSelectAdress.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PopupSelectAdress.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupTaskConfirm.xaml.cs">
+      <DependentUpon>PopupTaskConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupRiseError.xaml.cs">
+      <DependentUpon>PopupRiseError.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupRiseSuccess.xaml.cs">
+      <DependentUpon>PopupRiseSuccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupRiseConfirm.xaml.cs">
+      <DependentUpon>PopupRiseConfirm.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Popups\PopupArticleConfirm.xaml.cs">
       <DependentUpon>PopupArticleConfirm.xaml</DependentUpon>
     </Compile>
@@ -38,16 +61,70 @@
       <SubType>Code</SubType>
       <DependentUpon>PopupNews.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Popups\PopupsCreateTask\PopupKarma.xaml.cs">
+      <DependentUpon>PopupKarma.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupsCreateTask\PopupCoin.xaml.cs">
+      <DependentUpon>PopupCoin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupsCreateTask\PopupsInterval.xaml.cs">
+      <DependentUpon>PopupsInterval.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupsCreateTask\PopupsTimePicker.xaml.cs">
+      <DependentUpon>PopupsTimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupsCreateTask\PopupsNewDetail.xaml.cs">
+      <DependentUpon>PopupsNewDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupsCreateTask\PopupsDeadline.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PopupsDeadline.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupSendTask.xaml.cs">
+      <DependentUpon>PopupSendTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupSendSimpleAchievementsThree.xaml.cs">
+      <DependentUpon>PopupSendSimpleAchievementsThree.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupSendSimpleAchievementsDouble.xaml.cs">
+      <DependentUpon>PopupSendSimpleAchievementsDouble.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Popups\PopupSendSimpleAchievements.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PopupSendSimpleAchievements.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Popups\PopupSendArticle.xaml.cs">
       <DependentUpon>PopupSendArticle.xaml</DependentUpon>
     </Compile>
     <Compile Update="Popups\PopupSendAchievements.xaml.cs">
       <DependentUpon>PopupSendAchievements.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\CheckAchievements.xaml.cs">
+      <DependentUpon>CheckAchievements.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\CreateAchievements.xaml.cs">
+      <DependentUpon>CreateAchievements.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\destination\DestinationMenuSub.xaml.cs">
+      <DependentUpon>DestinationMenuSub.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\DialogsAdmin.xaml.cs">
+      <DependentUpon>DialogsAdmin.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ShareMenuSub.xaml.cs">
+      <DependentUpon>ShareMenuSub.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Bottom\SelectProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Popups\PopupAchievementsConfirm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popups\PopupSelectAdress.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Popups\PopupFilter.xaml">
@@ -60,10 +137,30 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Popups\PopupsCreateTask\PopupsDeadline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popups\PopupsCreateTask\PopupsNewTask.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popups\PopupSendSimpleAchievements.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Achievements.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Article.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CheckTask.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CreateTask.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\destination\DestinationMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Dialogs.xaml">
@@ -81,10 +178,19 @@
     <EmbeddedResource Update="Views\Profile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\ProfileSelect.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Raiting.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Share.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ShareMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ShareRaise.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:bottom="clr-namespace:MobPhone.Bottom"
              x:Class="MobPhone.MainPage">
-
-    <StackLayout Background="{StaticResource mainGradient}">
+    <Grid>
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Swiped="SwipeGestureRecognizer_Swiped" Direction="Down"/>
+        </Grid.GestureRecognizers>
+        
+        <StackLayout Background="{StaticResource mainGradient}">
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="20" Background="{StaticResource blockGradient}">
             <ImageButton Source="menu.xml" HorizontalOptions="Start" BackgroundColor="Transparent"/>
@@ -16,14 +21,43 @@
 
         </StackLayout>
 
-        <Button 
-            FontFamily="noto_sans_bold" Text="Koffein, г. Нальчик, ул. Ленина 145" 
-            Background="{StaticResource blueGradient}" Padding="0, 16, 0, 16" 
-            BackgroundColor="#5242FF"
-            TextColor="#fff" Margin="20, 0, 20, 20" CornerRadius="12"/>
+            <Frame
+            Background="{StaticResource blueGradient}" 
+            CornerRadius="12"
+            Padding="0, 16, 0, 16"
+            HasShadow="False"
+            Margin="20, 0, 20, 20">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Frame.GestureRecognizers>
+                <StackLayout Spacing="16" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label
+                        VerticalOptions="Center"
+                        Text="Koffein, г. Нальчик, ул. Ленина 145" 
+                        TextColor="White"
+                        TextDecorations="None"
+                        Style="{StaticResource RegularText}"
+                        FontSize="14"/>
+                    <Image
+                        VerticalOptions="Center"
+                        Source="arrow_down" />
+                </StackLayout>
 
+            </Frame>
         <Frame Padding="0" x:Name="myFrame" BackgroundColor="Transparent"/>
         
     </StackLayout>
+        <bottom:SelectProfileWithIcons
+         x:Name="SelectProfileSheet"
+         IsOpen="{Binding IsOpenSelect}"
+         ContentPosition="Bottom"
+         Movement="BottomUp"/>
+        <bottom:SelectProfile
+          x:Name="CustomBottomSheet" 
+          IsOpen="{Binding IsOpenCustom}"
+          ContentPosition="Bottom"
+          Movement="BottomUp"/>
 
+        
+    </Grid>
 </ContentPage>

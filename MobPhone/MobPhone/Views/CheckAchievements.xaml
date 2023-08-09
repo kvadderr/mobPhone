@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobPhone.Views.CheckAchievements">
+  <ContentView.Content>
+        <ScrollView Padding="0, 0, 0, 20">
+            <StackLayout Spacing="32">
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  />
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="back"/>
+                    <Label Text="Проверка достижения" FontSize="16" Style="{StaticResource BoldText}" />
+                </StackLayout>
+
+                <StackLayout Spacing="20" Padding="20, 0, 20, 0">
+                    <Label x:Name="selectProfile" WidthRequest="200" VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Сотрудник: " Style="{StaticResource RegularText}" FontSize="14" TextColor="#524E7D99"/>
+                                <Span Text="Мария Иванова, Валерия Румянцева" Style="{StaticResource RegularText}" FontSize="14" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <BoxView x:Name="selectProfileLine" HeightRequest="0.1" HorizontalOptions="FillAndExpand" BackgroundColor="#524E7D" />
+                    <Label WidthRequest="200" VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Название: " Style="{StaticResource RegularText}" FontSize="14" TextColor="#524E7D99"/>
+                                <Span Text="Лучшему сотруднику" Style="{StaticResource RegularText}" FontSize="14" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    
+                    <BoxView HeightRequest="0.1" HorizontalOptions="FillAndExpand" BackgroundColor="#524E7D" />
+                    <Label WidthRequest="200" VerticalTextAlignment="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Описание: " Style="{StaticResource RegularText}" FontSize="14" TextColor="#524E7D99"/>
+                                <Span Text="Равным образом, реализация намеченных плановых заданий говорит о возможностях вывода текущих активов." Style="{StaticResource RegularText}" FontSize="14" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <BoxView HeightRequest="0.1" HorizontalOptions="FillAndExpand" BackgroundColor="#524E7D" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Монеты:"  Style="{StaticResource RegularText}" FontSize="14" TextColor="#524E7D99" />
+                        <Image Source="small_coin" WidthRequest="20" HeightRequest="20"/>
+                        <Label Text="+ 100 монет" Style="{StaticResource RegularText}" FontSize="14" />
+                    </StackLayout>
+
+                    <BoxView HeightRequest="0.1" HorizontalOptions="FillAndExpand" BackgroundColor="#524E7D" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Карма:"  Style="{StaticResource RegularText}" FontSize="14" TextColor="#524E7D99" />
+                        <Image Source="small_karma" WidthRequest="20" HeightRequest="20" />
+                        <Label Text="+ 500 кармы" Style="{StaticResource RegularText}" FontSize="14" />
+                    </StackLayout>
+                    <BoxView HeightRequest="0.1" HorizontalOptions="FillAndExpand" BackgroundColor="#524E7D" />
+                </StackLayout>
+
+                <Button 
+                    Clicked="Button_Clicked"
+                Margin="20, 0, 20, 0" 
+                Background="{StaticResource blueGradient}" 
+                CornerRadius="12" TextTransform="None" 
+                FontFamily="noto_sans_regular" 
+                Text="Отправить задачу" TextColor="White"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

@@ -27,6 +27,14 @@ namespace MobPhone.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            if (App.isDestination == true)
+            {
+                var myCommand = App.ViewModel.ClickCommand;
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    myCommand.Execute("2");
+                });
+            }
             Navigation.ShowPopup(new PopupArticleConfirm());
             Navigation.ShowPopup(new PopupSendArticle());
         }

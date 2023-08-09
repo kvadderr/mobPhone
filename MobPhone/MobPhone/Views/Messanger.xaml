@@ -1,19 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:MobPhone.Custom"
              x:Class="MobPhone.Views.Messanger">
   <ContentView.Content>
-        <StackLayout Spacing="0" VerticalOptions="FillAndExpand">
+        <StackLayout Spacing="0" VerticalOptions="FillAndExpand" Padding="0">
             <StackLayout Spacing="20" VerticalOptions="StartAndExpand" BackgroundColor="#F0EFFE" Orientation="Horizontal" Padding="20, 0, 0, 0" HeightRequest="100" >
                 <Image Source="profile_back" />
-                <Image Source="Avatar.png" Grid.RowSpan="2" WidthRequest="48" HeightRequest="48"/>
+                <Image Source="Avatar.png" 
+                       Grid.RowSpan="2" 
+                       WidthRequest="48" 
+                       HeightRequest="48"/>
                 <StackLayout VerticalOptions="Center">
-                    <Label Text="Анна Горякова" Style="{StaticResource MediumText}" FontSize="14" />
-                    <Label  Text="Сейчас в сети" Style="{StaticResource LightText}" FontSize="10"/>
+                    <Label 
+                        Text="Анна Горякова" 
+                        Style="{StaticResource MediumText}" 
+                        FontSize="14" />
+                    <Label  
+                        Text="Сейчас в сети" 
+                        Style="{StaticResource LightText}" 
+                        FontSize="10"/>
                 </StackLayout>
             </StackLayout>
-            <ScrollView Padding="0, 40, 0, 40" BackgroundColor="#EEECFF">
-                <StackLayout VerticalOptions="FillAndExpand" >
+            <ScrollView VerticalOptions="FillAndExpand" Padding="0, 40, 0, 40" BackgroundColor="#EEECFF">
+                <StackLayout >
                     <Label Text="08.01.2023" HorizontalTextAlignment ="Center" Margin="0, 0, 0, 10"/>
                     <Frame BackgroundColor="#FD8C02" CornerRadius="12" HorizontalOptions="End" Margin="20, 0, 20, 0" HasShadow="False">
                         <StackLayout Orientation="Horizontal">
@@ -50,11 +60,32 @@
                         </StackLayout>
                     </Frame>
 
+                    <Frame Background="{StaticResource blueGradient}"  CornerRadius="12" HorizontalOptions="End" Margin="20, 0, 20, 0" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Спасибо! Это приятно слышать." Style="{StaticResource RegularText}" TextColor="White" WidthRequest="140"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End">
+                                <Label Text="16:49"  Style="{StaticResource LightText}" FontSize="10" TextColor="White"  />
+                                <Image Source="readable" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Background="{StaticResource blueGradient}"  CornerRadius="12" HorizontalOptions="End" Margin="20, 0, 20, 0" HasShadow="False">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Спасибо! Это приятно слышать." Style="{StaticResource RegularText}" TextColor="White" WidthRequest="140"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End">
+                                <Label Text="16:49"  Style="{StaticResource LightText}" FontSize="10" TextColor="White"  />
+                                <Image Source="readable" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
             </ScrollView>
-            <StackLayout Orientation="Horizontal" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="End" BackgroundColor="#E1DEFF" Padding="16, 12, 16, 12">
+            <StackLayout Orientation="Horizontal" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" BackgroundColor="#E1DEFF" Padding="16, 12, 16, 12">
                 <Frame Padding="20, 0, 20, 0" Margin="0" CornerRadius="12" BackgroundColor="White" HasShadow="False" HorizontalOptions="FillAndExpand">
-                    <Entry HeightRequest="44" Placeholder="Написать  сообщение..."/>
+                    <custom:CustomEntry FontFamily="noto_sans_regular" TextColor="#1E1584" FontSize="14" HeightRequest="44" PlaceholderColor="#524E7D" Placeholder="Написать  сообщение..."/>
                 </Frame>
                 <ImageButton Source="send" HorizontalOptions="End" BackgroundColor="Transparent"/>
             </StackLayout>

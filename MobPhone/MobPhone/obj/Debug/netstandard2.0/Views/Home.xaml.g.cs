@@ -17,8 +17,36 @@ namespace MobPhone.Views {
     public partial class Home : global::Xamarin.Forms.ContentView {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ContentView Root;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Custom.CustomMenuButton raitingBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Custom.CustomMenuButton profileBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Custom.CustomMenuButton destinationBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Custom.CustomMenuButton notificationBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Custom.CustomMenuButton smsBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MobPhone.Custom.CustomMenuButton smsAdminBtn;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Home));
+            Root = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ContentView>(this, "Root");
+            raitingBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Custom.CustomMenuButton>(this, "raitingBtn");
+            profileBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Custom.CustomMenuButton>(this, "profileBtn");
+            destinationBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Custom.CustomMenuButton>(this, "destinationBtn");
+            notificationBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Custom.CustomMenuButton>(this, "notificationBtn");
+            smsBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Custom.CustomMenuButton>(this, "smsBtn");
+            smsAdminBtn = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MobPhone.Custom.CustomMenuButton>(this, "smsAdminBtn");
         }
     }
 }
